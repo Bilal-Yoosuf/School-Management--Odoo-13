@@ -12,6 +12,7 @@
                     <field name="age"/>
                     <field name="section"/>
                     <field name="guardian"/>
+                    <field name="tutor_id"/>
                 </tree>
             </field>
         </record>
@@ -33,10 +34,13 @@
                                 <field name="gender"/>
                                 <field name="grade"/>
                                 <field name="section"/>
+<!--                                <field name="activity_ids"/>-->
                             </group>
                             <group>
                                 <field name="age"/>
+                                <field name="tutor_id"/>
                                 <field name="guardian"/>
+
                             </group>
                         </group>
                     </sheet>
@@ -76,9 +80,9 @@
         />
         <menuitem id="school_student_menu"
                   web_icon=""
-                  name="students" action="action_student"
+                  name="Students" action="action_student"
                   parent="school_root_menu"
-                  sequence="10"
+                  sequence="1"
         />
 
 

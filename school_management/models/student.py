@@ -1,5 +1,3 @@
-
-
 from odoo import models, fields
 
 
@@ -24,5 +22,18 @@ class SchoolStudent(models.Model):
         ('other', 'Other')
     ], string='Gender', default='male')
     image = fields.Binary(string="Image")
+    tutor_id = fields.Many2one('res.partner', string='Tutor')
+    bus_id = fields.Many2one('bus.bus', string='Bus Number')
+    # activity_ids = fields.Many2many('school.activity', string='Activities')
 
 
+class Bus(models.Model):
+    _name = 'bus.bus'
+    _description = 'School Bus Data'
+    name = fields.Integer(string='Bus Number')
+    student_ids = fields.One2many('school.student', 'bus_id', string='Students')
+
+
+# class Activity(models.Model):
+#     _name = 'school.activity'
+#     name = fields.Char(string="Name")

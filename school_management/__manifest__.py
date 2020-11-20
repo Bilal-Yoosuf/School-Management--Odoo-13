@@ -12,8 +12,10 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/school_bus.xml',
     ],
     'demo': [
         'demo/demo.xml',
+
     ],
 }
